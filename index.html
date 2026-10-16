@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>APEX MOTORS — Premium Sport Cars</title>
+<style>
+:root{--red:#e21d25;--black:#0a0d12;--white:#fff;--gray:#aab2bd;--glass:#ffffff16;--line:#ffffff20}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#eef1f4;color:#111820;font-family:Inter,Segoe UI,Arial,sans-serif;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42' viewBox='0 0 42 42'%3E%3Ctext y='32' font-size='30'%3E%F0%9F%8F%8E%EF%B8%8F%3C/text%3E%3C/svg%3E") 10 10,auto;overflow-x:hidden}
+a,button,.car-card{cursor:pointer}.page{min-height:100vh}
+.hero{height:720px;min-height:680px;position:relative;overflow:hidden;color:#fff;background:#10141a}
+.hero-bg{position:absolute;inset:-25px;background:url("https://www.snaplap.net/wp-content/uploads/2016/08/monza-straight.jpg") center/cover no-repeat;filter:blur(7px);transform:scale(1.07);opacity:.9}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05070bdd 0%,#05070b91 48%,#05070b35 100%),linear-gradient(0deg,#05070b 0%,transparent 45%,#05070b55)}
+.nav{height:82px;position:absolute;z-index:5;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid #fff2}
+.logo{font-size:24px;font-weight:950;font-style:italic;letter-spacing:1px}.logo span{color:var(--red)}
+.navlinks{display:flex;gap:28px;font-size:13px;font-weight:800}.navlinks a{color:#fff9}.navlinks a:hover{color:#fff}
+.navright{display:flex;gap:12px;align-items:center}.round{width:38px;height:38px;border:1px solid #fff3;border-radius:50%;background:#ffffff0d;color:#fff}
+.hero-content{position:relative;z-index:2;max-width:1250px;margin:auto;height:100%;padding:160px 5% 50px;display:flex;align-items:center}
+.copy{max-width:650px}.eyebrow{color:#ff3139;font-size:14px;font-weight:950;letter-spacing:3px}.copy h1{font-size:clamp(52px,7vw,94px);line-height:.9;letter-spacing:-5px;margin:18px 0}.copy h1 span{color:var(--red)}.copy p{font-size:17px;line-height:1.7;color:#e4e8ed;max-width:540px}
+.actions{display:flex;gap:12px;margin-top:28px}.btn{border:0;border-radius:8px;padding:15px 22px;font-weight:950;transition:.25s}.btn.red{background:var(--red);color:#fff;box-shadow:0 12px 35px #e21d2540}.btn.dark{background:#ffffff12;border:1px solid #fff3;color:#fff}.btn:hover{transform:translateY(-3px)}
+.metrics{position:absolute;right:5%;bottom:75px;z-index:3;width:280px;padding:19px;background:#05070b99;border:1px solid #fff3;border-radius:14px;backdrop-filter:blur(15px)}.metric{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #fff2}.metric:last-child{border:0}.metric b{font-size:20px}.metric small{color:#b9c1cb}
+.car-runner{position:absolute;z-index:4;bottom:35px;left:-180px;font-size:72px;animation:trackDrive 12s linear infinite;filter:drop-shadow(0 8px 8px #0009)}.car-runner:after{content:"";position:absolute;width:100px;height:4px;right:65px;bottom:8px;background:linear-gradient(90deg,transparent,#fff8);filter:blur(2px)}
+@keyframes trackDrive{0%{left:-180px}100%{left:110%}}
+.section{max-width:1250px;margin:auto;padding:60px 5%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.section-head h2{font-size:42px;letter-spacing:-2px;margin:0}.section-head p{color:#697482;margin:8px 0 0}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid #dce1e6;background:#fff;border-radius:99px;padding:9px 14px;font-weight:800}.filter.active,.filter:hover{background:#111820;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.car-card{background:#fff;border:1px solid #dde2e7;border-radius:16px;overflow:hidden;transition:.3s}.car-card:hover{transform:translateY(-8px);box-shadow:0 22px 45px #1118201c}.car-photo{height:225px;overflow:hidden;position:relative;background:#ddd}.car-photo img{width:100%;height:100%;object-fit:cover;transition:.5s}.car-card:hover img{transform:scale(1.06)}.tag{position:absolute;top:12px;left:12px;background:#fff;color:#111;padding:6px 9px;border-radius:6px;font-size:10px;font-weight:950}.heart{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;border:0;background:#0008;color:#fff}.card-body{padding:16px}.brand{font-size:10px;color:var(--red);font-weight:950;letter-spacing:1.5px}.name{font-size:21px;font-weight:950;margin:5px 0 13px}.mini{display:flex;gap:12px;color:#6c7580;font-size:11px}.price{font-size:20px;font-weight:950;margin-top:15px}.price small{font-size:10px;color:#858e98}
+.benefits{background:#0c1117;color:#fff;border-radius:18px;padding:25px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.benefit{padding:10px 15px;border-right:1px solid #fff2}.benefit:last-child{border:0}.benefit b{display:block;margin-bottom:6px}.benefit span{font-size:12px;color:#aab2bd;line-height:1.5}
+.modal{position:fixed;inset:0;background:#05070bbd;backdrop-filter:blur(10px);display:none;place-items:center;z-index:50;padding:20px}.modal.show{display:grid}.modal-box{width:min(980px,100%);background:#fff;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;animation:pop .3s}.detail-photo{min-height:500px}.detail-photo img{width:100%;height:100%;object-fit:cover}.detail-info{padding:32px;position:relative}.close{position:absolute;right:18px;top:18px;border:0;background:#edf0f3;width:38px;height:38px;border-radius:50%}.detail-info h2{font-size:40px;line-height:1;margin:14px 0}.desc{color:#68727d;line-height:1.65}.specs{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:22px 0}.spec{background:#f2f4f6;border-radius:9px;padding:12px}.spec b{display:block}.spec small{color:#77818c}.buy{width:100%;margin-top:12px}
+#transition{position:fixed;inset:0;background:#090c11;z-index:100;display:grid;place-items:center;pointer-events:none;opacity:0}.transition-car{font-size:90px;position:absolute;left:-160px}.transition-car.go{animation:transDrive 1s cubic-bezier(.7,0,.2,1)}.flame{position:absolute;font-size:35px;left:0;top:30px;animation:flame .12s infinite alternate}.transition-label{color:#fff;font-size:13px;letter-spacing:4px;font-weight:900;opacity:.8}@keyframes transDrive{0%{left:-160px;transform:scale(1)}100%{left:110%;transform:scale(1.3)}}@keyframes flame{to{transform:scale(1.25) translateX(-5px)}}
+.toast{position:fixed;right:20px;bottom:20px;z-index:70;background:#111820;color:#fff;padding:14px 17px;border-radius:10px;transform:translateY(100px);opacity:0;transition:.3s}.toast.show{transform:none;opacity:1}
+footer{background:#0c1117;color:#89939e;padding:35px 5%;text-align:center}.footer-logo{color:#fff;font-size:21px;font-weight:950;font-style:italic}.footer-logo span{color:var(--red)}
+@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.metrics{display:none}.hero-content{padding-top:135px}.benefits{grid-template-columns:1fr 1fr}.modal-box{grid-template-columns:1fr}.detail-photo{min-height:280px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.section-head{display:block}.filters{margin-top:18px}.hero{height:700px}.copy h1{letter-spacing:-3px}.benefits{grid-template-columns:1fr}.benefit{border-right:0;border-bottom:1px solid #fff2;padding:14px}.nav{padding:0 20px}.hero-content{padding-left:20px;padding-right:20px}.section{padding-left:20px;padding-right:20px}}
+</style>
+</head>
+<body>
+
+<div id="transition"><div class="transition-label">APEX PERFORMANCE // SHIFTING</div><div class="transition-car" id="transitionCar">🏎️<span class="flame">🔥</span></div></div>
+
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="nav">
+    <div class="logo">APEX <span>MOTORS</span></div>
+    <div class="navlinks"><a href="#home">HOME</a><a href="#inventory">INVENTORY</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div>
+    <div class="navright"><button class="round" onclick="toggleSound()">🔊</button><span style="font-size:12px;font-weight:900">ID ▾</span></div>
+  </div>
+  <div class="hero-content">
+    <div class="copy">
+      <div class="eyebrow">PREMIUM SPORTS CARS</div>
+      <h1>FEEL THE POWER.<br>OWN THE <span>LEGEND.</span></h1>
+      <p>Jelajahi koleksi mobil sport premium dengan performa luar biasa. Dari jalan raya sampai lintasan, pilih mesin yang sesuai dengan gaya berkendaramu.</p>
+      <div class="actions"><button class="btn red" onclick="goInventory()">LIHAT KOLEKSI →</button><button class="btn dark" onclick="showAbout()">APEX STANDARD</button></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div><b>400+</b><small> Cars Available</small></div><span>◉</span></div>
+      <div class="metric"><div><b>100%</b><small> Verified Quality</small></div><span>✓</span></div>
+      <div class="metric"><div><b>500+</b><small> Happy Clients</small></div><span>♢</span></div>
+      <div class="metric"><div><b>Premium</b><small> After Sales</small></div><span>★</span></div>
+    </div>
+  </div>
+  <div class="car-runner">🏎️</div>
+</header>
+
+<main>
+<section class="section" id="inventory">
+  <div class="section-head">
+    <div><h2>Featured Cars</h2><p>Mobil sport pilihan. Klik kartu untuk melihat detail.</p></div>
+    <div class="filters"><button class="filter active" onclick="filterCars('all',this)">ALL CARS</button><button class="filter" onclick="filterCars('coupe',this)">COUPE</button><button class="filter" onclick="filterCars('supercar',this)">SUPERCAR</button><button class="filter" onclick="filterCars('gt',this)">GT CAR</button></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="section" id="about">
+  <div class="benefits">
+    <div class="benefit"><b>◉ GARANSI RESMI</b><span>Garansi mesin & transmisi hingga 3 tahun.</span></div>
+    <div class="benefit"><b>▣ PEMBIAYAAN MUDAH</b><span>Opsi cicilan dengan proses pengajuan cepat.</span></div>
+    <div class="benefit"><b>↻ TUKAR TAMBAH</b><span>Tukar mobil lama dengan penawaran terbaik.</span></div>
+    <div class="benefit"><b>▰ PENGIRIMAN AMAN</b><span>Pengiriman kendaraan ke seluruh Indonesia.</span></div>
+  </div>
+</section>
+</main>
+
+<footer id="contact"><div class="footer-logo">APEX <span>MOTORS</span></div><p>Performance cars. Premium experience.</p></footer>
+<div class="toast" id="toast"></div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box" id="modalBox"></div></div>
+
+<script>
+const cars=[
+ {brand:"LAMBORGHINI",name:"Aventador SVJ",type:"supercar",price:"Rp 8,5 M",year:"2019",power:"770 HP",speed:"350+ km/h",drive:"AWD",img:"https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=88",desc:"V12 naturally aspirated dengan fokus ekstrem pada aerodinamika dan performa. Spesifikasi resmi Lamborghini mencatat 770 CV, 0–100 km/h 2,8 detik, dan top speed di atas 350 km/h."},
+ {brand:"FERRARI",name:"488 Pista",type:"supercar",price:"Rp 7,4 M",year:"2019",power:"710 HP",speed:"340 km/h",drive:"RWD",img:"https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=88",desc:"Mid-engine V8 Ferrari dengan karakter balap dan desain yang sangat agresif."},
+ {brand:"PORSCHE",name:"911 Turbo S",type:"coupe",price:"Rp 5,2 M",year:"2022",power:"640 HP",speed:"320 km/h",drive:"AWD",img:"https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=88",desc:"Sports car ikonik yang menggabungkan performa tinggi dengan kenyamanan untuk penggunaan harian."},
+ {brand:"McLAREN",name:"720S",type:"supercar",price:"Rp 6,8 M",year:"2020",power:"710 HP",speed:"341 km/h",drive:"RWD",img:"https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=88",desc:"Supercar ringan dengan mesin 4.0L twin-turbo V8 dan karakter pengendalian yang tajam."},
+ {brand:"ASTON MARTIN",name:"Vantage",type:"gt",price:"Rp 4,9 M",year:"2022",power:"528 HP",speed:"314 km/h",drive:"RWD",img:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=88",desc:"Grand tourer elegan dengan performa kuat dan karakter berkendara yang sporty."},
+ {brand:"NISSAN",name:"GT-R",type:"coupe",price:"Rp 3,9 M",year:"2021",power:"565 HP",speed:"315 km/h",drive:"AWD",img:"https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=88",desc:"Legenda performa Jepang dengan sistem AWD dan akselerasi brutal."}
+];
+
+const grid=document.getElementById("grid");
+function render(list=cars){
+ grid.innerHTML=list.map((c,i)=>`<article class="car-card" onclick="openCar(${cars.indexOf(c)})">
+ <div class="car-photo"><img src="${c.img}" alt="${c.brand} ${c.name}" loading="lazy"><span class="tag">${c.type.toUpperCase()}</span><button class="heart" onclick="event.stopPropagation();toast('Ditambahkan ke wishlist ♥')">♡</button></div>
+ <div class="card-body"><div class="brand">${c.brand}</div><div class="name">${c.name}</div><div class="mini"><span>▣ ${c.year}</span><span>⚡ ${c.power}</span></div><div class="price">${c.price} <small>mulai</small></div></div>
+ </article>`).join("");
+}
+function filterCars(type,btn){document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");render(type==="all"?cars:cars.filter(c=>c.type===type));transition()}
+function openCar(i){
+ const c=cars[i];
+ document.getElementById("modalBox").innerHTML=`<div class="detail-photo"><img src="${c.img}" alt="${c.brand} ${c.name}"></div><div class="detail-info"><button class="close" onclick="closeModal()">✕</button><div class="brand">${c.brand}</div><h2>${c.name}</h2><p class="desc">${c.desc}</p><div class="specs"><div class="spec"><b>${c.power}</b><small>Power</small></div><div class="spec"><b>${c.speed}</b><small>Top Speed</small></div><div class="spec"><b>${c.drive}</b><small>Drive</small></div><div class="spec"><b>${c.year}</b><small>Year</small></div></div><h3 style="font-size:25px">${c.price}</h3><button class="btn red buy" onclick="buy('${c.brand} ${c.name}')">AJUKAN PEMBELIAN →</button></div>`;
+ document.getElementById("modal").classList.add("show");engine(95,210);
+}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+function buy(name){closeModal();toast("Pengajuan pembelian "+name+" berhasil dibuat.");engine(70,300)}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2800)}
+function goInventory(){document.getElementById("inventory").scrollIntoView({behavior:"smooth"});engine(70,260)}
+function showAbout(){document.getElementById("about").scrollIntoView({behavior:"smooth"});engine(70,220)}
+function transition(){
+ const t=document.getElementById("transition"),c=document.getElementById("transitionCar");t.style.opacity=1;c.classList.remove("go");void c.offsetWidth;c.classList.add("go");setTimeout(()=>t.style.opacity=0,1000);engine(70,250);
+}
+let audio=false,ctx;
+function toggleSound(){audio=!audio;toast(audio?"Suara mesin aktif":"Suara mesin nonaktif");if(audio)engine(70,230)}
+function engine(start,end){
+ if(!audio)return;
+ try{ctx ||= new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.type="sawtooth";o.frequency.setValueAtTime(start,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(end,ctx.currentTime+.55);g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.16,ctx.currentTime+.04);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.62);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.65)}catch(e){}
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+render();
+</script>
+</body>
+</html>
